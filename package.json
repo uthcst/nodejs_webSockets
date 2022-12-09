@@ -1,7 +1,7 @@
 {
-  "name": "nodejs_hello",
+  "name": "nodejs_webSockets",
   "version": "1.0.0",
-  "description": "nodejs hello project",
+  "description": "nodejs nodejs_webSockets",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -9,16 +9,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/uthcst/nodejs_hello.git"
+    "url": "git+https://github.com/uthcst/nodejs_webSockets.git"
   },
   "keywords": [
     "nodejs",
-    "hello"
+    "webSockets"
   ],
   "author": "uthcst",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/uthcst/nodejs_hello/issues"
+    "url": "https://github.com/uthcst/nodejs_webSockets/issues"
   },
-  "homepage": "https://github.com/uthcst/nodejs_hello#readme"
+  "homepage": "https://github.com/uthcst/nodejs_webSockets#readme",
+  "dependencies": {
+    "ws": "^8.11.0"
+  }
 }

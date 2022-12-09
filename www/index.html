@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Sockets Example</title>
+    <script>
+        let ws;
+        function openWebSocket() {
+            ws = new WebSocket('ws://localhost:4001');
+            ws.onopen = function open() {
+                document.getElementById("output").innerHTML = "Connection is opened..."; 
+            };
+            ws.onmessage = function (evt) { 
+                  var received_msg = evt.data;
+                  document.getElementById("output").innerHTML = received_msg;
+               };
+				
+               ws.onclose = function() { 
+                  document.getElementById("output").innerHTML = "Connection is closed..."; 
+               };
+        }
+        function closeWebSocket() {
+            ws.close();
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Web Sockets Example</h1>
+    <button onclick="openWebSocket()">Open Web Socket</button>
+    <button onclick="closeWebSocket()">Close Web Socket</button>
+    <h3 id="output"></h3>
+</body>
+
+</html>
